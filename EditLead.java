@@ -1,10 +1,9 @@
 package main.java.week7.day1;
 
-import java.io.IOException;
+
 
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import main.java.week6.day2.ProjectSpecificationMethod;

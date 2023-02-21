@@ -14,19 +14,17 @@ import org.testng.annotations.Parameters;
 
 public class ProjectSpecificationMethod {
 
-	public RemoteWebDriver driver;
+	public ChromeDriver driver;
 	public String excelFile;
 
-	@Parameters({ "browser","url", "name", "password" })
+	@Parameters({ "url", "name", "password" })
 	@BeforeMethod
 	public void launchBrowser(String browser,String URL, String NAME, String PASSWORD) {
 		
-		if(browser.equalsIgnoreCase("chrome")) {
-			driver=	new ChromeDriver();
-		}
-		else if(browser.equalsIgnoreCase("edge")) {
-			driver=new EdgeDriver();
-		}
+		/*
+		 * if(browser.equalsIgnoreCase("chrome")) { driver= new ChromeDriver(); } else
+		 * if(browser.equalsIgnoreCase("edge")) { driver=new EdgeDriver(); }
+		 */
 		// ChromeDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(URL);
